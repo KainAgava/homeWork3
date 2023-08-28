@@ -1,5 +1,24 @@
-﻿Сборка начата…
-1>------ Сборка начата: проект: homeWork3, Конфигурация: Debug Any CPU ------
-1>  homeWork3 -> C:\Users\rakko\source\repos\homeWork3\homeWork3\bin\Debug\homeWork3.exe
-========== Сборка: успешно выполнено — 1 , со сбоем — 0, в актуальном состоянии — 0, пропущено — 0 ==========
-========== Сборка запущено в 12:54 PM, заняло 00,789 с ==========
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
+
+namespace homeWork3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int totalNumberImages = 52;
+            int countPerColumn = 3;
+
+            int fullRowsCount = totalNumberImages / countPerColumn;
+            int beyondMeasure = totalNumberImages % countPerColumn;
+
+            Console.WriteLine($"полностью заполненных рядов можно вывести: {fullRowsCount}");
+            Console.WriteLine($"сколько картинок будет сверх меры: {beyondMeasure}");
+        }
+    }
+}
